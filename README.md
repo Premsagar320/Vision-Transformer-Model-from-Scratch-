@@ -1,8 +1,39 @@
-# Vision-Transformer-Model-from-Scratch-
+
  
 
-This is a simple implementation of a Vision Transformer (ViT) for image classification. The model is built from scratch with basic components like patch embedding, positional encoding, and multi-head self-attention.  
+# Vision Transformer (ViT) From Scratch
 
-It is trained and tested on the CIFAR-10 dataset and gives accuracy comparable to standard CNN models.  
+This repository contains a basic implementation of the Vision Transformer (ViT) model built from scratch using PyTorch. The goal of this project was to understand and implement the main components of ViT without using high-level transformer libraries. The model was trained and tested on the CIFAR-10 dataset.
 
- trained  and evaluate the model using the scripts provided. This project is meant to help understand how ViTs work under the hood without relying on libraries that abstract everything away.
+## What’s Included
+
+- Patch embedding (splitting images into patches and flattening them)
+- Positional encoding
+- Multi-head self-attention (implemented manually)
+- Transformer encoder blocks (LayerNorm + MLP)
+- Classification token (CLS)
+- Training and evaluation pipeline for CIFAR-10
+
+## Why This Project
+
+The Vision Transformer shows that transformers can work well on images if the images are broken into patches. This project was done to learn how ViT works internally by building everything step by step.
+
+
+## Training Details
+
+- Dataset: CIFAR-10  
+- Optimizer: AdamW  
+- Loss: CrossEntropy  
+- Epochs: configurable  
+- Works on both CPU and GPU  
+
+The model reaches accuracy comparable to standard CNN models when trained properly.
+
+## How to Use
+
+Install dependencies:
+
+```bash
+pip install torch torchvision numpy tqdm
+
+
